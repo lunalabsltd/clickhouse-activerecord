@@ -70,6 +70,8 @@ module ActiveRecord
         private
 
         def apply_format(sql, format)
+          return sql if sql.start_with?("INSERT")
+
           format ? "#{sql} FORMAT #{format}" : sql
         end
 

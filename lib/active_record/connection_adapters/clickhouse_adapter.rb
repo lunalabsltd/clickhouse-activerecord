@@ -2,6 +2,8 @@
 
 require 'clickhouse-activerecord/arel/visitors/to_sql'
 require 'clickhouse-activerecord/arel/table'
+require 'active_record/connection_adapters/abstract/schema_creation'
+require 'active_record/connection_adapters/deduplicable'
 require 'active_record/connection_adapters/clickhouse/oid/date'
 require 'active_record/connection_adapters/clickhouse/oid/date_time'
 require 'active_record/connection_adapters/clickhouse/oid/big_integer'
