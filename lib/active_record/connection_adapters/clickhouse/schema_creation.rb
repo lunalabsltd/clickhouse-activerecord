@@ -3,7 +3,7 @@
 module ActiveRecord
   module ConnectionAdapters
     module Clickhouse
-      class SchemaCreation < SchemaCreation# :nodoc:
+      class SchemaCreation < ActiveRecord::ConnectionAdapters::SchemaCreation# :nodoc:
 
         def visit_AddColumnDefinition(o)
           +"ADD COLUMN #{accept(o.column)}"
