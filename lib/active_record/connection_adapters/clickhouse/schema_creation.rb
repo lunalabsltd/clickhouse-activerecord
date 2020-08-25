@@ -19,8 +19,8 @@ module ActiveRecord
         end
 
         def add_table_options!(create_sql, options)
-          if options[:options].present?
-            create_sql << " ENGINE = #{options[:options]}"
+          if options.options.present?
+            create_sql << " ENGINE = #{options.options}"
           else
             create_sql << " ENGINE = Log()"
           end
